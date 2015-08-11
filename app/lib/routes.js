@@ -1,22 +1,22 @@
 Router.configure({
-  layoutTemplate: 'MasterLayout',
-  loadingTemplate: 'Loading',
-  notFoundTemplate: 'NotFound'
+    layoutTemplate: 'MasterLayout',
+    loadingTemplate: 'Loading',
+    notFoundTemplate: 'NotFound'
 });
 
 Router.route('/', {
-  name: 'home',
-  controller: 'HomeController',
-  action: 'action',
-  where: 'client'
+    name: 'home',
+    controller: 'HomeController',
+    action: 'action',
+    where: 'client'
 });
 
 Router.route('/library', {
-  name: 'library',
-  controller: 'DashboardController',
-  where: 'client'
+    name: 'library',
+    controller: 'DashboardController',
+    where: 'client'
 });
 
 Router.plugin('ensureSignedIn', {
-  only: []
+    only: ['dashboard']
 });

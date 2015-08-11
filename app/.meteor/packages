@@ -20,8 +20,8 @@ dburles:factory
 anti:fake
 cunneen:mailgun
 iron:router@1.0.0
+useraccounts:iron-routing
 yasinuslu:blaze-meta
 aldeed:collection2
 aldeed:autoform
 
-hybrid:assets
