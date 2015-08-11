@@ -1,0 +1,3 @@
+Template.library.rendered = function() {
+
+};

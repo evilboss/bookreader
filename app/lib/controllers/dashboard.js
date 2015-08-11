@@ -6,7 +6,7 @@ DashboardController = AppController.extend({
     items: Items.find({})
   },
   onAfterAction: function () {
-    Meta.setTitle('Dashboard');
+    Meta.setTitle('Library');
   }
 });
 

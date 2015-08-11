@@ -11,12 +11,12 @@ Router.route('/', {
   where: 'client'
 });
 
-Router.route('/dashboard', {
-  name: 'dashboard',
+Router.route('/library', {
+  name: 'library',
   controller: 'DashboardController',
   where: 'client'
 });
 
 Router.plugin('ensureSignedIn', {
-  only: ['dashboard']
+  only: []
 });
