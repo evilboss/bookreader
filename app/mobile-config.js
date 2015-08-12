@@ -1,6 +1,3 @@
-/**
- * Created by aarondrup on 7/15/15.
- */
 App.info({
     name: 'Book Reader',
     description: 'An Android app built with Meteor',
