@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Start SNC Ebook Library
-Exec=bash -c '"$PWD"; cd "`echo $0 | sed s/start.desktop$//`"; meteor;$SHELL; cd "_PWD"' %k
+Exec=bash -c '"$PWD"; cd "`echo $0 | sed s/start.desktop$//`"; meteor run android;$SHELL; cd "_PWD"' %k
 Type=Application
 Terminal=true
 Icon=utilities-terminal

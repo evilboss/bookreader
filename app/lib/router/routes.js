@@ -1,28 +1,29 @@
 Router.configure({
-  layoutTemplate: 'MasterLayout',
-  loadingTemplate: 'Loading',
-  notFoundTemplate: 'NotFound'
+    layoutTemplate: 'MasterLayout',
+    loadingTemplate: 'Loading',
+    notFoundTemplate: 'NotFound'
 });
 
 Router.route('/', {
-  name: 'home',
-  controller: 'HomeController',
-  action: 'action',
-  where: 'client'
+    name: 'home',
+    controller: 'HomeController',
+    action: 'action',
+    where: 'client'
 });
 
 Router.route('/library', {
-  name: 'library',
-  controller: 'DashboardController',
-  action: 'library',
-  where: 'client'
+    name: 'library',
+    controller: 'DashboardController',
+    action: 'library',
+    where: 'client'
 });
 Router.route('addbook', {
-  name: 'addbook',
-  controller: 'DashboardController',
-  action: 'addbook',
-  where: 'client'
+    name: 'addbook',
+    controller: 'DashboardController',
+    action: 'addbook',
+    where: 'client'
 });
+
 Router.plugin('ensureSignedIn', {
-  only: []
+    only: ['dashboard']
 });
