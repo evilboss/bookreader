@@ -1,17 +1,21 @@
 DashboardController = AppController.extend({
   waitOn: function() {
-    return this.subscribe('items');
+    return this.subscribe('books');
   },
   data: {
-    items: Items.find({})
+    Books: Books.find({})
   },
   onAfterAction: function () {
     Meta.setTitle('Library');
+  },
+  library: function() {
+    this.render('library');
+  },
+  addbook: function() {
+    this.render('AddBook');
   }
 });
 
 DashboardController.events({
-  'click [data-action=doSomething]': function (event, template) {
-    event.preventDefault();
-  }
+
 });

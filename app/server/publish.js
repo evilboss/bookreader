@@ -3,6 +3,8 @@
  *  this.ready();
  * });
  */
-Meteor.publish(null, function (){
-    return Meteor.roles.find({})
-})
+
+
+Meteor.publish('books', function (/* args */) {
+  return Books.find();
+});
