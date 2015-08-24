@@ -3,3 +3,8 @@
  *  this.ready();
  * });
  */
+
+
+Meteor.publish('books', function (/* args */) {
+  return Books.find();
+});

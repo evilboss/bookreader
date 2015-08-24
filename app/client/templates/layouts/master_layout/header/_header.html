@@ -15,7 +15,7 @@
 
       <div class="collapse navbar-collapse" id="main-nav">
         {{#if currentUser}}
-          <!--<ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-user"></i> {{ currentUser.profile.name }} <i class="fa fa-caret-down"></i>
@@ -24,11 +24,11 @@
                 <li><a href="#" data-action="logout"><i class="fa fa-lock"></i> Sign Out</a></li>
               </ul>
             </li>
-          </ul>-->
+          </ul>
         {{else}}
           <div class="navbar-right">
-            <!--<a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
-            <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a>-->
+            <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
+            <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a>
           </div>
         {{/if}}
 

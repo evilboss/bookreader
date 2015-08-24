@@ -14,9 +14,15 @@ Router.route('/', {
 Router.route('/library', {
   name: 'library',
   controller: 'DashboardController',
+  action: 'library',
   where: 'client'
 });
-
+Router.route('addbook', {
+  name: 'addbook',
+  controller: 'DashboardController',
+  action: 'addbook',
+  where: 'client'
+});
 Router.plugin('ensureSignedIn', {
   only: []
 });
