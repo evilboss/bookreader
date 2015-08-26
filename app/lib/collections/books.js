@@ -9,11 +9,6 @@ Books.attachSchema(new SimpleSchema({
         type: String,
         label: "Author"
     },
-    copies: {
-        type: Number,
-        label: "Number of copies",
-        min: 0
-    },
     summary: {
         type: String,
         label: "Brief summary",

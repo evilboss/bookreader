@@ -1,3 +1,12 @@
 <template name="BookItem">
-    <li class="list-group-item">Title:{{ title }}</li>
+
+<tbody>
+<tr>
+<td>{{#linkTo route='bookinfo' id=_id}}
+{{ title }}
+{{/linkTo}}</td>
+    <td>{{ author }}</td>
+</tr>
+</tbody>
+
 </template>
