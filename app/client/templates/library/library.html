@@ -1,14 +1,14 @@
 <template name="library">
-  <div class="template-library">
-    <div class="page-header">
-      <h1>Library</h1>
-    </div>
-      <a href="{{pathFor 'addbook'}}">Add New Book</a>
-    <ul class="list-group">
-      {{#each Books}}
-          {{>BookItem title=this.title id=this._id}}
-      {{/each}}
-    </ul>
+    <div class="template-library">
+        <div class="page-header">
+            <h1>Library</h1>
+        </div>
+        <a href="{{pathFor 'addbook'}}" class="btn btn-primary">Add New Book</a><br><br>
+        <ul class="list-group">
+            {{#each Books}}
+                {{>BookItem title=this.title id=this._id}}
+            {{/each}}
+        </ul>
 
-  </div>
+    </div>
 </template>
