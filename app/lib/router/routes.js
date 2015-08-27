@@ -17,6 +17,12 @@ Router.route('/library', {
     action: 'library',
     where: 'client'
 });
+Router.route('book/:id', {
+    name: 'viewBook',
+    controller: 'DashboardController',
+    action: 'viewBook',
+    where: 'client'
+});
 Router.route('addbook', {
     name: 'addbook',
     controller: 'DashboardController',

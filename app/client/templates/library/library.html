@@ -6,7 +6,7 @@
       <a href="{{pathFor 'addbook'}}">Add New Book</a>
     <ul class="list-group">
       {{#each Books}}
-          {{>BookItem title=this.title}}
+          {{>BookItem title=this.title id=this._id}}
       {{/each}}
     </ul>
 

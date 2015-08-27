@@ -1,3 +1,13 @@
 <template name="BookInfo">
-  <h1>Find me in app/client/templates/library/book_info/book_info</h1>
+    {{#each Books}}
+        <h1>Title:{{this.title}}</h1>
+
+
+    {{/each}}
+    <div class="row">
+        <div class="col col-s12">
+            <embed width="100%" height ="300px" src="https://www.iscp.ie/sites/default/files/pdf-sample.pdf"
+                   type='application/pdf'>
+        </div>
+    </div>
 </template>

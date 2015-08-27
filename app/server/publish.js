@@ -5,6 +5,8 @@
  */
 
 
-Meteor.publish('books', function (/* args */) {
-  return Books.find();
+Meteor.publish('books', function (id) {
+
+  if(!id)return Books.find();
+  return Books.find({_id:id});
 });

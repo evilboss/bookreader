@@ -1,6 +1,6 @@
 DashboardController = AppController.extend({
   waitOn: function() {
-    return this.subscribe('books');
+    return this.subscribe('books',this.params.id);
   },
   data: {
     Books: Books.find({})
@@ -13,6 +13,9 @@ DashboardController = AppController.extend({
   },
   addbook: function() {
     this.render('AddBook');
+  },
+  viewBook: function(){
+    this.render('BookInfo');
   }
 });
 
