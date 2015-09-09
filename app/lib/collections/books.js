@@ -17,7 +17,7 @@ Books.attachSchema(new SimpleSchema({
     },
     file:{
         type: String,
-        label: "File",
+        label: "Upload",
         optional: true,
         max: 1000
     }
