@@ -1,15 +1,13 @@
 App.info({
     name: 'Book Reader',
-    description: 'An Android app built with Meteor',
+    description: 'An BookReader Android app For SNC',
     version: '0.0.1',
     author: 'Jr Reyes',
-    email: 'contact@example.com',
-    website: 'http://localhost:3000/'
+    email: 'jr.evilboss@gmail.com',
+    website: 'http://snc-e-book-library.meteor.com/'
 });
-App.accessRule('https://localhost:3000');
-
+App.accessRule('http://snc-e-book-library.meteor.com/*');
 App.icons({
-
     // Android
     'android_hdpi': 'resources/icons/android/drawable-hdpi/ic_launcher.png',
     'android_ldpi': 'resources/icons/android/drawable-ldpi/ic_launcher.png',
