@@ -10,15 +10,20 @@
         <div class="row">
             <div class="col col-s12">
 
-                {{#if this.file}}
 
-                    <canvas id="pdfcanvas"></canvas>
-                {{else}}
-                    <h1>Not Found</h1>
-                {{/if}}
             </div>
         </div>
 
     {{/each}}
 
+
+    <div>
+        <button id="prev" class="btn btn-primary">Previous</button>
+        <button id="next" class="btn btn-primary">Next</button>
+    </div>
+    <br/>
+    <div>
+        <h5 class="text-center"><span id="page_num"></span> / <span id="page_count"></span></h5>
+    </div>
+    <canvas id="pdfcanvas"></canvas>
 </template>

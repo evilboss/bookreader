@@ -4,3 +4,8 @@
 .touch {
     -webkit-overflow-scrolling: touch;
 }
+
+canvas {
+    height: 100%;
+    width: 100%;
+}

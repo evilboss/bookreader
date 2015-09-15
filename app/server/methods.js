@@ -2,10 +2,12 @@
 /* Server Only Methods */
 /*****************************************************************************/
 Meteor.methods({
-  /*
-   * Example:
-   *
-   * '/app/items/insert': function (item) {
-   * }
-   */
-});
+    myServerMethod: function (doc) {
+        try {
+            check(doc, mySchema);
+            mySchema.clean(doc);
+        } catch (e) {
+            throw new Meteor.Error(e);
+        }
+    }
+})

@@ -15,14 +15,29 @@ Books.attachSchema(new SimpleSchema({
         optional: true,
         max: 1000
     },
-    file:{
+    file: {
         type: String,
-        label: "Upload",
-        optional: true,
-        max: 1000
+        autoform: {
+            afFieldInput: {
+                type: 'cfs-file',
+                collection: 'files',
+                label: 'Choose file',
+            }
+        }
     }
 }));
 
+Files = new FS.Collection("files", {
+    stores: [new FS.Store.GridFS("filesStore")]
+});
+
+
+Files.allow({
+    download: function () {
+        return true;
+    },
+    fetch: null
+});
 
 if (Meteor.isServer) {
     Books.allow({
