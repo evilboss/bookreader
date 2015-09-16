@@ -1,6 +1,8 @@
 <template name="ListCategoriesItem">
-        <div class="col-md-3">
-            <h3>{{ name }}</h3>
-            {{> quickRemoveButton collection="Category" _id=id}}
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3>{{ name }}</h3></div>
+        <div class="panel-body">
+            {{> quickRemoveButton class="btn alert-danger" style="width:100%;" collection="Category" _id=id}}
         </div>
+    </div>
 </template>

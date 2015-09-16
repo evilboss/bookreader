@@ -1,14 +1,12 @@
 /*****************************************************************************/
 /* BookLayout: Event Handlers */
 /*****************************************************************************/
-Template.BookLayout.events({
-});
+Template.BookLayout.events({});
 
 /*****************************************************************************/
 /* BookLayout: Helpers */
 /*****************************************************************************/
-Template.BookLayout.helpers({
-});
+Template.BookLayout.helpers({});
 
 /*****************************************************************************/
 /* BookLayout: Lifecycle Hooks */
@@ -122,7 +120,7 @@ Template.BookLayout.rendered = function () {
         renderPage(pageNum);
     });
 };
-Template.BookLayout.onRendered( function () {
+Template.BookLayout.onRendered(function () {
     console.log('puki after rendered');
 });
 
