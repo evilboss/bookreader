@@ -14,3 +14,7 @@ Meteor.publish('books', function (id) {
 Meteor.publish('pdfs', function (/* args */) {
   return PdfFile.find();
 });
+
+Meteor.publish('categories', function (/* args */) {
+  return Category.find();
+});

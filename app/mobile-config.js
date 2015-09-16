@@ -24,8 +24,10 @@ App.launchScreens({
     'android_hdpi_landscape': 'resources/splash/splash.png',
     'android_xhdpi_portrait': 'resources/splash/splash.png',
     'android_xhdpi_landscape': 'resources/splash/splash.png'
-})
+});
 
+App.accessRule('http://*');
+App.accessRule('https:/*');
 // Set PhoneGap/Cordova preferences
 App.setPreference('StatusBarOverlaysWebView', 'false');
 App.setPreference('StatusBarBackgroundColor', '#000000');

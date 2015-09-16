@@ -1,0 +1,8 @@
+<template name="Addcategory">
+    {{#if IsAdmin }}
+        <h1>Add Category</h1>
+        {{> quickForm collection="Category" id="CategoryForm" type="insert" buttonContent="Add New Category"}}
+    {{else}}
+        {{> NotAuthorized}}
+    {{/if}}
+</template>
