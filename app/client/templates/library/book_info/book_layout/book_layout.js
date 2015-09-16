@@ -1,12 +1,14 @@
 /*****************************************************************************/
 /* BookLayout: Event Handlers */
 /*****************************************************************************/
-Template.BookLayout.events({});
+Template.BookLayout.events({
+});
 
 /*****************************************************************************/
 /* BookLayout: Helpers */
 /*****************************************************************************/
-Template.BookLayout.helpers({});
+Template.BookLayout.helpers({
+});
 
 /*****************************************************************************/
 /* BookLayout: Lifecycle Hooks */
@@ -17,7 +19,9 @@ Template.BookLayout.created = function () {
 Template.BookLayout.rendered = function () {
     PDFJS.workerSrc = '/packages/pascoual_pdfjs/build/pdf.worker.js';
 // Create PDF
-    var url = $('#pdfFileURL').val();
+    var pdfUrl = $('pdfFileURL').val();
+    console.log(pdfUrl)
+    var url = '/pdf.pdf';
     var pdfDoc = null,
         pageNum = 1,
         pageRendering = false,
@@ -118,6 +122,10 @@ Template.BookLayout.rendered = function () {
         renderPage(pageNum);
     });
 };
+Template.BookLayout.onRendered( function () {
+    console.log('puki after rendered');
+});
+
 
 Template.BookLayout.destroyed = function () {
 };
