@@ -27,10 +27,10 @@ aldeed:autoform
 cfs:standard-packages
 cfs:autoform
 cfs:gridfs
-abdj:autoform-file
+cfs:ui
 hybrid:assets
 accounts-google
 service-configuration
 accounts-ui
 pascoual:pdfjs
-
+meteortoys:allthings

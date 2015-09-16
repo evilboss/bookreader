@@ -19,8 +19,8 @@ Books.attachSchema(new SimpleSchema({
         type: String,
         autoform: {
             afFieldInput: {
-                type: 'fileUpload',
-                collection: 'PdfFile',
+                type: 'cfs-file',
+                collection: 'pdf',
 
             }
         },
@@ -28,21 +28,22 @@ Books.attachSchema(new SimpleSchema({
     }
 }));
 
-PdfFile = new FS.Collection("pdfFile", {
-    stores: [new FS.Store.GridFS("pdf", {})]
+PdfFile = new FS.Collection("pdf", {
+    stores: [new FS.Store.GridFS("filesStore", {})]
 });
 
 PdfFile.allow({
     insert: function (userId, doc) {
-        return userId;
+        return true;
     },
     download: function () {
         return true;
-    }
+    },
+    fetch: null
 });
 Books.helpers({
     bookFile: function () {
-        return '/cfs/files/pdf/'+this.file;
+        return this.file;
     }
 });
 
