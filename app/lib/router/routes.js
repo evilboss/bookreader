@@ -42,6 +42,13 @@ Router.route('/categories', {
     action: 'categoryList',
     where: 'client'
 });
+Router.route('category/:category', {
+    name: 'category.category',
+    controller: 'CategoryController',
+    action: 'action',
+    where: 'client'
+
+});
 Router.plugin('ensureSignedIn', {
     only: ['dashboard']
 });
