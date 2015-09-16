@@ -23,6 +23,9 @@ DashboardController = AppController.extend({
     },
     categoryList:function(){
         this.render('ListCategories');
+    },
+    newCategory:function(){
+        this.render('Addcategory');
     }
 });
 

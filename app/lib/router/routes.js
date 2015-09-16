@@ -32,11 +32,9 @@ Router.route('addbook', {
 
 Router.route('/category/new', {
     name: 'category.new',
-    controller: 'HomeController',
+    controller: 'DashboardController',
     action: 'newCategory',
-    where: 'client',
-    parent: 'dashboard',
-    title: 'Add Category'
+    where: 'client'
 });
 Router.route('/categories', {
     name: 'categories',
