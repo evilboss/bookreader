@@ -32,17 +32,22 @@ Router.route('addbook', {
 
 Router.route('/category/new', {
     name: 'category.new',
-    controller: 'HomeController',
+    controller: 'DashboardController',
     action: 'newCategory',
-    where: 'client',
-    parent: 'dashboard',
-    title: 'Add Category'
+    where: 'client'
 });
 Router.route('/categories', {
     name: 'categories',
     controller: 'DashboardController',
     action: 'categoryList',
     where: 'client'
+});
+Router.route('category/:category', {
+    name: 'category.category',
+    controller: 'CategoryController',
+    action: 'action',
+    where: 'client'
+
 });
 Router.plugin('ensureSignedIn', {
     only: ['dashboard']
