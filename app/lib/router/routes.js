@@ -29,12 +29,7 @@ Router.route('addbook', {
     action: 'addbook',
     where: 'client'
 });
-Router.route('/bookinfo/:_id', {
-    name: 'bookinfo',
-    controller: 'DashboardController',
-    action: 'bookinfo',
-    where: 'client'
-});
+
 
 Router.plugin('ensureSignedIn', {
     only: ['dashboard']

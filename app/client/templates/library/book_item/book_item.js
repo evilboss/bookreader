@@ -8,6 +8,11 @@ Template.BookItem.events({
 /* BookItem: Helpers */
 /*****************************************************************************/
 Template.BookItem.helpers({
+    'book':function(){
+        console.log('book');
+        console.log(Books.findOne());
+        return Books.findOne();
+    }
 });
 
 /*****************************************************************************/

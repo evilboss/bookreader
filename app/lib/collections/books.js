@@ -19,27 +19,36 @@ Books.attachSchema(new SimpleSchema({
         type: String,
         autoform: {
             afFieldInput: {
-                type: 'cfs-file',
-                collection: 'files',
-                label: 'Choose file',
+                type: 'fileUpload',
+                collection: 'PdfFile',
+
             }
-        }
+        },
+        label: 'upload'
     }
 }));
 
-Files = new FS.Collection("files", {
-    stores: [new FS.Store.GridFS("filesStore")]
+PdfFile = new FS.Collection("pdfFile", {
+    stores: [new FS.Store.GridFS("pdf", {})]
 });
 
-
-Files.allow({
+PdfFile.allow({
+    insert: function (userId, doc) {
+        return userId;
+    },
     download: function () {
         return true;
-    },
-    fetch: null
+    }
+});
+Books.helpers({
+    bookFile: function () {
+        return '/cfs/files/pdf/'+this.file;
+    }
 });
 
 if (Meteor.isServer) {
+
+
     Books.allow({
         insert: function (userId, doc) {
             return true;
