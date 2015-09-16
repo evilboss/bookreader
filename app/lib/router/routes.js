@@ -30,7 +30,20 @@ Router.route('addbook', {
     where: 'client'
 });
 
-
+Router.route('/category/new', {
+    name: 'category.new',
+    controller: 'HomeController',
+    action: 'newCategory',
+    where: 'client',
+    parent: 'dashboard',
+    title: 'Add Category'
+});
+Router.route('/categories', {
+    name: 'categories',
+    controller: 'DashboardController',
+    action: 'categoryList',
+    where: 'client'
+});
 Router.plugin('ensureSignedIn', {
     only: ['dashboard']
 });

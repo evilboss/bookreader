@@ -15,6 +15,23 @@ Books.attachSchema(new SimpleSchema({
         optional: true,
         max: 1000
     },
+    category: {
+        type: String,
+        optional: false,
+        autoform: {
+            afFieldInput: {
+                options: function () {
+                    var categories = Category.find().fetch();
+                    var options = [];
+                    for (categs in categories) {
+                        var option = {label: categories[categs].name, value: categories[categs].name};
+                        options.push(option)
+                    }
+                    return options;
+                }
+            }
+        }
+    },
     file: {
         type: String,
         autoform: {

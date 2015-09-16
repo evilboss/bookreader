@@ -1,0 +1,12 @@
+<template name="ListCategories">
+    <h2>Categories
+        {{#if IsAdmin }}
+            <small><a href="{{pathFor 'category.new'}}"><i class="fa fa-plus-circle fa-2x"></i></a></small>
+        {{/if}}
+    </h2>
+    {{#each Category}}
+        {{#with this}}
+           {{>ListCategoriesItem name=name}}
+        {{/with}}
+    {{/each}}
+</template>
