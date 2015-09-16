@@ -1,6 +1,8 @@
 <template name="ListCategoriesItem">
-        <div class="col-md-3">
-            <a href="{{pathFor 'category.category' category=name}}" class="btn btn-primary"><h3>{{ name }}</h3></a>
-            {{> quickRemoveButton collection="Category" _id=id}}
+    <div class="panel panel-default">
+        <div class="panel-heading"><a href="{{pathFor 'category.category' category=name}}"><h3>{{ name }}</h3></a></div>
+        <div class="panel-body">
+            {{> quickRemoveButton collection="Category" class="btn alert-danger" style="width:100%;" _id=id}}
         </div>
+    </div>
 </template>
