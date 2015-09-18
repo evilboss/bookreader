@@ -1,7 +1,8 @@
 <template name="BookLayout">
 
     {{#with FS.GetFile "pdf" file}}
-        <input id="pdfFileURL" type=hidden value="{{this.url store='filesStore'}}"/>
+
+            <input id="pdfFileURL" type=hidden value="{{this.url store='filesStore'}}"/>
 
         <div>
             <button id="prev" class="btn btn-primary">Previous</button>
@@ -12,7 +13,9 @@
         <div>
             <h5 class="text-center"><span id="page_num"></span> / <span id="page_count"></span></h5>
         </div>
-        <canvas id="pdfcanvas"></canvas>
+
+        <canvas id="pdfcanvas">
+        </canvas>
 
     {{/with}}
 

@@ -4,12 +4,6 @@
  * });
  */
 
-Meteor.publish('books', function (id) {
-    if (!id) {
-        return Books.find({})
-    }
-    return Books.find({_id: id});
-});
 Meteor.publish('bookCategory', function (category) {
     if (!category)return Books.find();
     return Books.find({category: category});

@@ -17,9 +17,8 @@ Template.BookLayout.created = function () {
 Template.BookLayout.rendered = function () {
     PDFJS.workerSrc = '/packages/pascoual_pdfjs/build/pdf.worker.js';
 // Create PDF
-    var pdfUrl = $('pdfFileURL').val();
-    console.log(pdfUrl)
-    var url = '/pdf.pdf';
+    var pdfUrl = $('#pdfFileURL').val();
+    var url = pdfUrl;
     var pdfDoc = null,
         pageNum = 1,
         pageRendering = false,
@@ -27,11 +26,6 @@ Template.BookLayout.rendered = function () {
         scale = 0.8,
         canvas = document.getElementById('pdfcanvas'),
         ctx = canvas.getContext('2d');
-
-    /**
-     * Get page info from document, resize canvas accordingly, and render page.
-     * @param num Page number.
-     */
 
     if (!window.requestAnimationFrame) {
         window.requestAnimationFrame = (function () {
@@ -120,10 +114,6 @@ Template.BookLayout.rendered = function () {
         renderPage(pageNum);
     });
 };
-Template.BookLayout.onRendered(function () {
-    console.log('puki after rendered');
-});
-
 
 Template.BookLayout.destroyed = function () {
 };
