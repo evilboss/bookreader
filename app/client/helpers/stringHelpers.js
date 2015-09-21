@@ -4,5 +4,4 @@ Template.registerHelper('truncate', function (string, length) {
 });
 Template.registerHelper('isAdmin', function (string, length) {
     return Roles.userIsInRole(Meteor.userId(), 'admin')  // => true
-
 });

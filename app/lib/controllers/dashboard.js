@@ -3,13 +3,14 @@ DashboardController = AppController.extend({
         return this.subscribe('books', this.params.id),
             this.subscribe('pdfs'),
             this.subscribe('categories'),
-            this.subscribe('admins');
+            this.subscribe('admins'),
+            this.subscribe('uploads');
     },
     data: {
         Books: Books.find({}),
-        PdfFile: PdfFile.find({}),
         Category: Category.find({}),
-        Admins:Admins.find({})
+        Admins: Admins.find({}),
+        uploads: Uploads.find()
     },
     onAfterAction: function () {
         Meta.setTitle('Library');
@@ -20,21 +21,23 @@ DashboardController = AppController.extend({
     addbook: function () {
         this.render('AddBook');
     },
+    uploadbook: function () {
+        this.render('UploadBook');
+    },
     viewBook: function () {
         this.render('BookInfo');
     },
-    categoryList:function(){
+    categoryList: function () {
         this.render('ListCategories');
     },
-    newCategory:function(){
+    newCategory: function () {
         this.render('Addcategory');
     },
-    admin:function(){
+    admin: function () {
         this.render('Admins');
     },
-    adminAdd:function(){
+    adminAdd: function () {
         this.render('Addadmin');
     }
 });
-DashboardController.events({
-});
+DashboardController.events({});

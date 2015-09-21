@@ -1,6 +1,11 @@
 <template name="AddBook">
+
     {{#if isAdmin}}
-        {{> quickForm collection="Books" id="insertBookForm" type="insert" buttonContent="Add New Book"}}
+
+
+        {{> quickForm collection="Books" id="insertBookForm" type="insert" buttonContent="Add New Book" omitFields="file"}}
+
+
     {{else}}
         {{>NotAuthorized}}
     {{/if}}

@@ -1,34 +1,40 @@
 /*****************************************************************************/
 /* AddBook: Event Handlers */
 /*****************************************************************************/
-Template.AddBook.events({});
+Template.AddBook.events({
 
+});
 /*****************************************************************************/
 /* AddBook: Helpers */
 /*****************************************************************************/
-Template.AddBook.helpers({});
-
+Template.AddBook.helpers({
+    uploadFormData: function () {
+        return {id: this._id}
+    },
+    specificFormData: function () {
+        console.log({
+            id: this._id,
+            other: this.other,
+            hard: 'Lolcats'
+        });
+        return {
+            id: this._id,
+            other: this.other,
+            hard: 'Lolcats'
+        }
+    }
+});
 /*****************************************************************************/
 /* AddBook: Lifecycle Hooks */
 /*****************************************************************************/
 Template.AddBook.created = function () {
 };
-
 Template.AddBook.rendered = function () {
-    AutoForm.addHooks(
-        ["insertBookForm"],
-        {
-            before: {
-                method: CfsAutoForm.Hooks.beforeInsert
-            },
-            after: {
-                method: CfsAutoForm.Hooks.afterInsert
-            }
-        }
-    );
 };
-
 Template.AddBook.destroyed = function () {
 };
 
 
+Books.after.insert(function (userId, doc) {
+    Router.go('uploadbook', {id: doc._id});
+});

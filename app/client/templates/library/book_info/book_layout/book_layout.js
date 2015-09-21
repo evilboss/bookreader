@@ -15,9 +15,11 @@ Template.BookLayout.created = function () {
 };
 
 Template.BookLayout.rendered = function () {
+    var currentBook = Template.instance().data.file;
+    console.log(currentBook);
     PDFJS.workerSrc = '/packages/pascoual_pdfjs/build/pdf.worker.js';
 // Create PDF
-    var pdfUrl = $('#pdfFileURL').val();
+    var pdfUrl =currentBook;
     var url = pdfUrl;
     var pdfDoc = null,
         pageNum = 1,

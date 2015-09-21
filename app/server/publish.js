@@ -10,9 +10,6 @@ Meteor.publish('bookCategory', function (category) {
     return Books.find();
 });
 
-Meteor.publish('pdfs', function (/* args */) {
-    return PdfFile.find();
-});
 
 Meteor.publish('categories', function (/* args */) {
     return Category.find();
@@ -21,3 +18,7 @@ Meteor.publish('categories', function (/* args */) {
 Meteor.publish('admins', function (/* args */) {
     return Admins.find();
 });
+
+Meteor.publish('uploads', function() {
+    return Uploads.find();
+})
