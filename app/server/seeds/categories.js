@@ -7,7 +7,7 @@ Meteor.startup(function () {
 
     });
     if (Category.find({}).count() === 0) {
-        var SeedCategories = ['jr@internetsoftwaresystems.com','ar@internetsoftwaresystems.com']
+        var SeedCategories = ['Programming','Filipino','Porn','English']
         for(var categs in SeedCategories){
             var seedcategory = {name:SeedCategories[categs]};
             Category.insert(seedcategory);
