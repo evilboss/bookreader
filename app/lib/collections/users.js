@@ -1,7 +1,6 @@
 /**
  * Created by gilbertor on 9/21/15.
  */
-
 Meteor.users.after.insert(function (userId, doc) {
     var adminlist = Admins.find().fetch();
     for (var admin in adminlist) {
@@ -9,7 +8,5 @@ Meteor.users.after.insert(function (userId, doc) {
             Meteor.users.update({_id:doc._id},{$set:{roles:['admin']}});
             break;
         }
-
     }
-    //    doc.roles=['admin'];
 });

@@ -1,10 +1,12 @@
 <template name="library">
     <div class="template-library">
-        {{isAdmin}}
+
         <div class="page-header">
             <h1>Library</h1>
         </div>
-        <a href="{{pathFor 'addbook'}}" class="btn btn-primary">Add New Book</a><br><br>
+        {{#if isAdmin}}
+            <a href="{{pathFor 'addbook'}}" class="btn btn-primary">Add New Book</a><br><br>
+        {{/if}}
         <ul class="list-group">
             {{#each LibraryList}}
                 {{>BookItem title=this.title id=this._id}}

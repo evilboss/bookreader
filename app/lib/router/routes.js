@@ -64,5 +64,5 @@ Router.route('/Admins/New', {
 
 });
 Router.plugin('ensureSignedIn', {
-    only: ['dashboard']
+    only: ['dashboard','library','viewBook','addbook','category.new','categories','category.category','Admin.list','Admin.Add']
 });
