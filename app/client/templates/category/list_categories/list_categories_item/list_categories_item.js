@@ -18,12 +18,6 @@ Template.ListCategoriesItem.helpers({
             console.log(error);
         };
     },
-    onSuccess: function () {
-        return function (result) {
-            alert("Successfully deleted!");
-            console.log(result);
-        };
-    },
     beforeRemove: function () {
         return function (collection, id) {
             var doc = collection.findOne(id);

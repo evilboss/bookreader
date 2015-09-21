@@ -1,12 +1,23 @@
 <template name="Admins">
+    <div class="page-header">
+        <h1>Admin</h1>
+    </div>
     {{#if isAdmin}}
-        <a class="navbar-brand" href="{{pathFor 'Admin.Add'}}">Add New Admin</a>
+        <a class="btn btn-primary" href="{{pathFor 'Admin.Add'}}">Add New Admin</a>
+        <br><br>
         {{#each Admins}}
-            <li>{{this.email}}</li>
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>{{this.email}}</h3></div>
+                {{#if isAdmin}}
+                    <div class="panel-body">
+                        {{> quickRemoveButton collection="Category" class="btn alert-danger" onError=onError beforeRemove=beforeRemove style="width:100%;" _id=id}}
+                    </div>
+                {{/if}}
+            </div>
         {{/each}}
+
     {{else}}
         {{>NotAuthorized}}
     {{/if}}
-
 
 </template>

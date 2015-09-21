@@ -1,13 +1,13 @@
 <template name="ListCategories">
-    <h2>Categories
-    {{#if isAdmin}}
-            <a href="{{pathFor 'category.new'}}">New Category</a>
-    {{/if}}
-
-    </h2>
+    <div class="page-header">
+        <h1>Add New Admin {{#if isAdmin}}
+            <a href="{{pathFor 'category.new'}}">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+        {{/if}}</h1>
+    </div>
     {{#each Category}}
         {{#with this}}
-           {{>ListCategoriesItem name=name id=_id}}
+            {{>ListCategoriesItem name=name id=_id}}
         {{/with}}
     {{/each}}
 </template>

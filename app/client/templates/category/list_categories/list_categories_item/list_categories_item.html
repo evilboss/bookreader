@@ -3,7 +3,7 @@
         <div class="panel-heading"><a href="{{pathFor 'category.category' category=name}}"><h3>{{ name }}</h3></a></div>
         {{#if isAdmin}}
             <div class="panel-body">
-                {{> quickRemoveButton collection="Category" class="btn alert-danger" onError=onError onSuccess=onSuccess beforeRemove=beforeRemove style="width:100%;" _id=id}}
+                {{> quickRemoveButton collection="Category" class="btn alert-danger" onError=onError beforeRemove=beforeRemove style="width:100%;" _id=id}}
             </div>
         {{/if}}
     </div>
