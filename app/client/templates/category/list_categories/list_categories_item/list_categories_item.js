@@ -11,6 +11,26 @@ Template.ListCategoriesItem.helpers({
 
         return Subcategories.find({category: this.name}).fetch();
 
+    },
+    onError: function () {
+        return function (error) {
+            alert("BOO!");
+            console.log(error);
+        };
+    },
+    onSuccess: function () {
+        return function (result) {
+            alert("Successfully deleted!");
+            console.log(result);
+        };
+    },
+    beforeRemove: function () {
+        return function (collection, id) {
+            var doc = collection.findOne(id);
+            if (confirm('Are you sure you want to delete "' + doc.name + '"?')) {
+                this.remove();
+            }
+        };
     }
 });
 

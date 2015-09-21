@@ -11,13 +11,13 @@ Meteor.publish('bookCategory', function (category) {
 });
 
 Meteor.publish('pdfs', function (/* args */) {
-  return PdfFile.find();
+    return PdfFile.find();
 });
 
 Meteor.publish('categories', function (/* args */) {
-  return Category.find();
+    return Category.find();
 });
 
 Meteor.publish('admins', function (/* args */) {
-  return Admins.find();
+    return Admins.find();
 });
