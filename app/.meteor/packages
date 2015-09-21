@@ -24,6 +24,7 @@ useraccounts:iron-routing
 yasinuslu:blaze-meta
 aldeed:collection2
 aldeed:autoform
+aldeed:delete-button
 cfs:standard-packages
 cfs:autoform
 cfs:gridfs
@@ -34,4 +35,3 @@ service-configuration
 accounts-ui
 pascoual:pdfjs
 meteortoys:allthings
-aldeed:delete-button

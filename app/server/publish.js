@@ -3,10 +3,11 @@
  *  this.ready();
  * });
  */
-
+Meteor.publish('books', function (/* args */) {
+    return Books.find();
+});
 Meteor.publish('bookCategory', function (category) {
-    if (!category)return Books.find();
-    return Books.find({category: category});
+    return Books.find();
 });
 
 Meteor.publish('pdfs', function (/* args */) {

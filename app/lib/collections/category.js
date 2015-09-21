@@ -27,15 +27,15 @@ if (Meteor.isServer) {
 
     Category.deny({
         insert: function (userId, doc) {
-            return true;
+            return false;
         },
 
         update: function (userId, doc, fieldNames, modifier) {
-            return true;
+            return false;
         },
 
         remove: function (userId, doc) {
-            return true;
+            return false;
         }
     });
 }

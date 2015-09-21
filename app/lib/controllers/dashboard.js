@@ -28,5 +28,5 @@ DashboardController = AppController.extend({
         this.render('Addcategory');
     }
 });
-
-DashboardController.events({});
+DashboardController.events({
+});
