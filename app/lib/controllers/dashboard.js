@@ -2,12 +2,14 @@ DashboardController = AppController.extend({
     waitOn: function () {
         return this.subscribe('books', this.params.id),
             this.subscribe('pdfs'),
-            this.subscribe('categories');
+            this.subscribe('categories'),
+            this.subscribe('admins');
     },
     data: {
         Books: Books.find({}),
         PdfFile: PdfFile.find({}),
-        Category: Category.find({})
+        Category: Category.find({}),
+        Admins:Admins.find({})
     },
     onAfterAction: function () {
         Meta.setTitle('Library');
@@ -26,6 +28,12 @@ DashboardController = AppController.extend({
     },
     newCategory:function(){
         this.render('Addcategory');
+    },
+    admin:function(){
+        this.render('Admins');
+    },
+    adminAdd:function(){
+        this.render('Addadmin');
     }
 });
 DashboardController.events({
