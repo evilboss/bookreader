@@ -1,0 +1,8 @@
+<template name="Addadmin">
+    {{#if isAdmin}}
+        {{> quickForm collection="Admins" id="AdminForm" type="insert" buttonContent="New Admin"}}
+    {{else}}
+        {{>NotAuthorized}}
+    {{/if}}
+
+</template>

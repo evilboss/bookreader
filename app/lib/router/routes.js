@@ -49,6 +49,20 @@ Router.route('category/:category', {
     where: 'client'
 
 });
+Router.route('/Admins', {
+    name: 'Admin.list',
+    controller: 'DashboardController',
+    action: 'admin',
+    where: 'client'
+
+});
+Router.route('/Admins/New', {
+    name: 'Admin.Add',
+    controller: 'DashboardController',
+    action: 'adminAdd',
+    where: 'client'
+
+});
 Router.plugin('ensureSignedIn', {
-    only: ['dashboard']
+    only: ['dashboard','library','viewBook','addbook','category.new','categories','category.category','Admin.list','Admin.Add']
 });

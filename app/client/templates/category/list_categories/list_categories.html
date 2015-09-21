@@ -1,7 +1,8 @@
 <template name="ListCategories">
     <h2>Categories
-
+    {{#if isAdmin}}
             <a href="{{pathFor 'category.new'}}">New Category</a>
+    {{/if}}
 
     </h2>
     {{#each Category}}

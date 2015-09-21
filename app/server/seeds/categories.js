@@ -6,14 +6,11 @@ Meteor.startup(function () {
         }
 
     });
-
     if (Category.find({}).count() === 0) {
-
-        _(10).times(function (n) {
-            Factory.create('category');
-        });
-
+        var SeedCategories = ['jr@internetsoftwaresystems.com','ar@internetsoftwaresystems.com']
+        for(var categs in SeedCategories){
+            var seedcategory = {name:SeedCategories[categs]};
+            Category.insert(seedcategory);
+        }
     }
-
-})
-;
+});

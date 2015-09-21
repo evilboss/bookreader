@@ -1,8 +1,10 @@
 <template name="ListCategoriesItem">
     <div class="panel panel-default">
         <div class="panel-heading"><a href="{{pathFor 'category.category' category=name}}"><h3>{{ name }}</h3></a></div>
-        <div class="panel-body">
-            {{> quickRemoveButton collection="Category" onError=onError onSuccess=onSuccess beforeRemove=beforeRemove class="btn alert-danger" style="width:100%;" _id=id}}
-        </div>
+        {{#if isAdmin}}
+            <div class="panel-body">
+                {{> quickRemoveButton collection="Category" class="btn alert-danger" onError=onError onSuccess=onSuccess beforeRemove=beforeRemove style="width:100%;" _id=id}}
+            </div>
+        {{/if}}
     </div>
 </template>
