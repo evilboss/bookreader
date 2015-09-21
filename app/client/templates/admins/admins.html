@@ -1,0 +1,7 @@
+<template name="Admins">
+    <a class="navbar-brand" href="{{pathFor 'Admin.Add'}}">Add New Admin</a>
+    {{#each Admins}}
+        <li>{{this.email}}</li>
+    {{/each}}
+
+</template>
