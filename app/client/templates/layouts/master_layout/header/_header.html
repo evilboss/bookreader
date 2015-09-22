@@ -1,42 +1,50 @@
 <template name="_header">
-  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="{{pathFor 'home'}}">SNC E-Book Lib</a>
-      </div>
-      <div class="collapse navbar-collapse" id="main-nav">
-        {{#if currentUser}}
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <!--<i class="fa fa-user"></i>--> {{ currentUser.profile.name }} <!--<i class="fa fa-caret-down"></i>-->
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#" data-action="logout"><!--<i class="fa fa-lock"></i>--> Sign Out</a></li>
-              </ul>
-            </li>
-          </ul>
-        {{else}}
-          <div class="navbar-right">
-            <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
-            <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a>
-          </div>
-        {{/if}}
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-        <ul class="nav navbar-nav navbar-right">
-          <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><!--<i class="fa fa-home"></i>--> Home</a></li>
-          <li class="{{ isActiveRoute regex='library' }}"><a href="{{ pathFor 'library' }}"><!--<i class="fa fa-book"></i>--> Library</a></li>
-          <li class="{{ isActiveRoute regex='categories' }}"><a href="{{ pathFor 'categories' }}"><!--<i class="fa fa-book"></i>--> Categories</a></li>
-{{#if isAdmin}}<li class="{{ isActiveRoute regex='Admin.list' }}"><a href="{{ pathFor 'Admin.list' }}"><!--<i class="fa fa-book"></i>--> Admin</a></li>{{/if}}
-        </ul>
-      </div>
+                <a class="navbar-brand" href="{{pathFor 'home'}}">SNC E-Book Library</a>
+            </div>
+            <div class="collapse navbar-collapse" id="main-nav">
+                {{#if currentUser}}
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown text-center">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!--<i class="fa fa-user"></i>--> {{ currentUser.profile.name }}
+                                <!--<i class="fa fa-caret-down"></i>-->
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#" data-action="logout"><!--<i class="fa fa-lock"></i>--> Sign Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                {{else}}
+                    <div class="navbar-right">
+                        <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
+                        <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a>
+                    </div>
+                {{/if}}
 
-    </div>
-  </nav>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="{{ isActiveRoute regex='home' }} text-center"><a href="{{ pathFor 'home' }}">
+                        <!--<i class="fa fa-home"></i>--> Home</a></li>
+                    <li class="{{ isActiveRoute regex='library' }} text-center"><a href="{{ pathFor 'library' }}">
+                        <!--<i class="fa fa-book"></i>--> Library</a></li>
+                    <li class="{{ isActiveRoute regex='categories' }} text-center"><a href="{{ pathFor 'categories' }}">
+                        <!--<i class="fa fa-book"></i>--> Categories</a></li>
+                    {{#if isAdmin}}
+                        <li class="{{ isActiveRoute regex='Admin.list' }} text-center"><a
+                                href="{{ pathFor 'Admin.list' }}"><!--<i class="fa fa-book"></i>--> Admin</a>
+                        </li>{{/if}}
+                </ul>
+            </div>
+
+        </div>
+    </nav>
 </template>

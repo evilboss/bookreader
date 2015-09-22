@@ -1,7 +1,7 @@
 <template name="BookItem">
 
     <div class="panel panel-default">
-        <div class="panel-heading"><h3>{{#linkTo route='viewBook' id=id label=id}}{{title}}{{/linkTo}}</h3></div>
+        <div class="panel-heading text-center"><h3>{{#linkTo route='viewBook' id=id label=id}}{{title}}{{/linkTo}}</h3></div>
         {{#if isAdmin}}
             <div class="panel-body">
                 {{> quickRemoveButton class="btn alert-danger" style="width:100%;" collection="Books" _id=id}}

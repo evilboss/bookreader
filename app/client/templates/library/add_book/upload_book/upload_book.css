@@ -3,3 +3,19 @@
 /*****************************************************************************/
 .upload-book {
 }
+
+.btn.btn-primary.btn-file.upload-control,
+.btn.btn-info.upload-control.start{
+    border-radius:5px !important;
+    margin: 20px 0px;
+    width: 100%;
+}
+.uploadPanel{
+    display: block;
+}
+.uploadPanel .btn{
+    display: block;
+}
+i{
+    display:none;
+}

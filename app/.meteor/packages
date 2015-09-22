@@ -24,7 +24,6 @@ yasinuslu:blaze-meta
 aldeed:collection2
 aldeed:autoform
 aldeed:delete-button
-hybrid:assets
 service-configuration
 accounts-ui
 tomi:upload-server
@@ -32,3 +31,4 @@ tomi:upload-jquery
 standard-app-packages
 pascoual:pdfjs
 meteortoys:allthings
+

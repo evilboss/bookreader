@@ -1,21 +1,23 @@
 <template name="BookLayout">
 
 
-
-
-        <div>
-            <button id="prev" class="btn btn-primary">Previous</button>
-            <button id="next" class="btn btn-primary">Next</button>
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <button style="width: 100%;" id="prev" class="btn btn-primary">Previous</button>
         </div>
-        <br/>
-
-        <div>
-            <h5 class="text-center"><span id="page_num"></span> / <span id="page_count"></span></h5>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <button style="width: 100%;" id="next" class="btn btn-primary">Next</button>
         </div>
+    </div>
 
-        <canvas id="pdfcanvas">
-        </canvas>
+    <br/>
 
+    <div>
+        <h5 class="text-center"><span id="page_num"></span> / <span id="page_count"></span></h5>
+    </div>
+
+    <canvas id="pdfcanvas">
+    </canvas>
 
 
 </template>
