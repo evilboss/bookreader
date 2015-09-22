@@ -1,0 +1,29 @@
+{ 
+  // Server authentication info 
+  "servers": [ 
+    { 
+      "host": "45.55.159.163", 
+      "username": "root", 
+      "pem": "~/.ssh/id_rsa"
+    } 
+  ], 
+  // Set to False if using Compose.io 
+  "setupMongo": true,
+  // WARNING: Node.js is required! Only skip if you already have Node.js installed on server. 
+  "setupNode": true, 
+  // WARNING: If nodeVersion omitted will setup 0.10.36 by default. Do not use v, only version number. 
+  "nodeVersion": "0.10.38", 
+  // Install PhantomJS in the server 
+  "setupPhantom": true, 
+  // Application name (No spaces) 
+  "appName": "bookreader", 
+  // Location of app (local directory) 
+  "app": "../../app", 
+  // Configure environment 
+  "env": { 
+    "PORT": 80, 
+    "ROOT_URL": "http://45.55.159.163", 
+    "NODE_ENV": "production" 
+}, 
+  "deployCheckWaitTime": 15 
+}
