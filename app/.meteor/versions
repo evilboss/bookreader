@@ -81,7 +81,6 @@ npm-bcrypt@0.7.8_2
 observe-sequence@1.0.6
 ordered-dict@1.0.3
 pascoual:pdfjs@1.1.114
-peerlibrary:pdf.js@1.0.791_4
 random@1.0.3
 reactive-dict@1.1.0
 reactive-var@1.0.5
