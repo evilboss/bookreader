@@ -29,6 +29,7 @@ accounts-ui
 tomi:upload-server
 tomi:upload-jquery
 standard-app-packages
+peerlibrary:pdf.js
 pascoual:pdfjs
 meteortoys:allthings
 

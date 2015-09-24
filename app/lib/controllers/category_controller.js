@@ -1,4 +1,4 @@
-CategoryController = AppController.extend({
+CategoryController = RouteController.extend({
     waitOn: function () {
         return this.subscribe('bookCategory', this.params.category),
             this.subscribe('pdfs'),

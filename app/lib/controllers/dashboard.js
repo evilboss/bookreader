@@ -1,4 +1,5 @@
-DashboardController = AppController.extend({
+DashboardController = RouteController.extend({
+    layoutTemplate: 'MasterLayout',
     waitOn: function () {
         return this.subscribe('books', this.params.id),
             this.subscribe('pdfs'),
@@ -15,6 +16,7 @@ DashboardController = AppController.extend({
     onAfterAction: function () {
         Meta.setTitle('Library');
     },
+
     library: function () {
         this.render('library');
     },

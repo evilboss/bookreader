@@ -11,7 +11,7 @@ Template.BookInfo.helpers({
         return this.params.id;
     },
     book: function () {
-        return Template.instance();
+        return Books.findOne({_id:Router.current().params.id});
     }
 });
 

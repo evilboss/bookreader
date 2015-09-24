@@ -36,6 +36,7 @@ Router.route('addbook/uploadbook/:id', {
     where: 'client'
 });
 
+
 Router.route('/category/new', {
     name: 'category.new',
     controller: 'DashboardController',
