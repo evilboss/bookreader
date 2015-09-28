@@ -14,7 +14,7 @@
                 <div class="panel-heading text-center"><h3>{{this.email}}</h3></div>
                 {{#if isAdmin}}
                     <div class="panel-body">
-                        {{> quickRemoveButton collection="Category" class="btn alert-danger" onError=onError beforeRemove=beforeRemove style="width:100%;" _id=id}}
+                        {{> quickRemoveButton collection="Admins" class="btn alert-danger" onError=onError beforeRemove=beforeRemove style="width:100%;" _id=_id}}
                     </div>
                 {{/if}}
             </div>
