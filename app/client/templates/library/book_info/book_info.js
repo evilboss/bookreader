@@ -23,6 +23,7 @@ Template.BookInfo.created = function () {
 
 Template.BookInfo.rendered = function () {
 
+
 };
 
 Template.BookInfo.destroyed = function () {
