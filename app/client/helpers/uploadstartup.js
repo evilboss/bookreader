@@ -7,5 +7,11 @@ Meteor.startup(function() {
     Uploader.uploadUrl = Meteor.absoluteUrl("upload"); // Cordova needs absolute URL
     Uploader.finished = function(index, fileInfo, templateContext) {
         Uploads.insert(fileInfo);
+        console.log(fileInfo);
+        GlobalNotification.info({
+            title: 'Admin has added new book',
+            content: fileInfo.name,
+            duration: 10 // duration the notification should stay in seconds
+        });
     }
 });

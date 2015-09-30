@@ -5,3 +5,7 @@ Template.registerHelper('truncate', function (string, length) {
 Template.registerHelper('isAdmin', function (string, length) {
     return Roles.userIsInRole(Meteor.userId(), 'admin')  // => true
 });
+
+Template.registerHelper('isOnline', function () {
+    return Meteor.users.find({"status.online": true});
+});

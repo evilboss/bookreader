@@ -5,14 +5,18 @@ DashboardController = RouteController.extend({
             this.subscribe('pdfs'),
             this.subscribe('categories'),
             this.subscribe('admins'),
-            this.subscribe('uploads');
+            this.subscribe('uploads'),
+            this.subscribe('userStatus'),
+            this.subscribe('directory');
     },
     data: {
         Books: Books.find({}),
         Category: Category.find({}),
         Admins: Admins.find({}),
-        uploads: Uploads.find()
+        uploads: Uploads.find({})
+
     },
+
     onAfterAction: function () {
         Meta.setTitle('Library');
     },

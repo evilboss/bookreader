@@ -18,4 +18,6 @@ Meteor.users.after.insert(function (userId, doc) {
             }
         }
     }
+    /*Accounts.sendVerificationEmail(userId);*/
+
 });

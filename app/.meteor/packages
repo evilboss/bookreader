@@ -6,6 +6,7 @@
 meteor-platform
 less
 accounts-password
+accounts-base
 useraccounts:bootstrap
 alanning:roles
 zimme:iron-router-active
@@ -17,12 +18,12 @@ mrt:underscore-string-latest
 matb33:collection-hooks
 dburles:factory
 anti:fake
-cunneen:mailgun
+email
+http
 iron:router@1.0.0
 useraccounts:iron-routing
 yasinuslu:blaze-meta
 aldeed:collection2
-aldeed:autoform
 aldeed:delete-button
 service-configuration
 accounts-ui
@@ -30,5 +31,8 @@ tomi:upload-server
 tomi:upload-jquery
 standard-app-packages
 pascoual:pdfjs
+mizzao:user-status
 meteortoys:allthings
 
+aldeed:autoform@4.0.2
+yogiben:notifications

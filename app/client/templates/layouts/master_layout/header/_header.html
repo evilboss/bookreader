@@ -14,6 +14,7 @@
             <div class="collapse navbar-collapse" id="main-nav">
                 {{#if currentUser}}
                     <ul class="nav navbar-nav navbar-right">
+                        {{> notificationsDropdown icon='envelope' iconEmpty='envelope-o'}}
                         <li class="dropdown text-center">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!--<i class="fa fa-user"></i>--> {{ currentUser.profile.name }}
@@ -41,8 +42,11 @@
                     {{#if isAdmin}}
                         <li class="{{ isActiveRoute regex='Admin.list' }} text-center"><a
                                 href="{{ pathFor 'Admin.list' }}"><!--<i class="fa fa-book"></i>--> Admin</a>
-                        </li>{{/if}}
+                        </li>
+                    {{/if}}
+
                 </ul>
+
             </div>
 
         </div>

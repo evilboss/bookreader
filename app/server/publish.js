@@ -22,3 +22,7 @@ Meteor.publish('admins', function (/* args */) {
 Meteor.publish('uploads', function() {
     return Uploads.find();
 })
+
+Meteor.publish("directory", function () {
+    return Meteor.users.find({}, {fields: {_id:1}});
+});
