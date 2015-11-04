@@ -1,6 +1,5 @@
 <template name="library">
     <div class="template-library">
-
         <div class="page-header">
             <h1>Library</h1>
         </div>
@@ -9,9 +8,8 @@
         {{/if}}
         <ul class="list-group">
             {{#each LibraryList}}
-                {{>BookItem title=this.title id=this._id}}
+                {{>BookItem title=this.title author=this.author summary=this.summary category=this.category id=this._id}}
             {{/each}}
         </ul>
-
     </div>
 </template>

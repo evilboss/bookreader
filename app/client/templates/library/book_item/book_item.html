@@ -2,6 +2,17 @@
 
     <div class="panel panel-default">
         <div class="panel-heading text-center"><h3>{{#linkTo route='viewBook' id=id label=id}}{{title}}{{/linkTo}}</h3></div>
+        <h4>Author:
+            {{author}}
+        </h4>
+        <h4>Summary:
+            {{summary}}
+        </h4>
+        <h4>Category:
+            {{category}}
+        </h4>
+        <img src="{{title}}.jpg" class="img-responsive center-block" alt="Responsive image">
+
         {{#if isAdmin}}
             <div class="panel-body">
                 {{> quickRemoveButton class="btn alert-danger" style="width:100%;" collection="Books" _id=id}}
